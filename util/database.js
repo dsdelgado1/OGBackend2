@@ -7,7 +7,7 @@ const pool = mysql.createPool({
     host: 'us-cdbr-east-06.cleardb.net',
     user: 'b1a19a11cc23ca',
     database: 'heroku_bc4830374d63828',
-    password: process.env.DATABASE_PASSWORD
+    password: '35db1c05'
 });
 
 export default pool.promise();
