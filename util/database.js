@@ -4,10 +4,10 @@ dotenv.config();
 
 
 const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    database: 'wbw-crm',
-    password: process.env.DATABASE_PASSOWORD
+    host: 'us-cdbr-east-06.cleardb.net',
+    user: 'bef6c7e6abb7f1',
+    database: 'heroku_af22355d14aaa1b',
+    password: process.env.DATABASE_PASSWORD
 });
 
 export default pool.promise();
