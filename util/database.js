@@ -5,8 +5,8 @@ dotenv.config();
 
 const pool = mysql.createPool({
     host: 'us-cdbr-east-06.cleardb.net',
-    user: 'bef6c7e6abb7f1',
-    database: 'heroku_af22355d14aaa1b',
+    user: 'b1a19a11cc23ca',
+    database: 'heroku_bc4830374d63828',
     password: process.env.DATABASE_PASSWORD
 });
 
