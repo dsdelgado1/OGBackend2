@@ -1,6 +1,5 @@
 import mysql from 'mysql2';
 
-console.log(process.env.DATABASE_PASSWORD)
 const pool = mysql.createPool({
     host: 'us-cdbr-east-06.cleardb.net',
     user: 'b1a19a11cc23ca',
