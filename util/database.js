@@ -1,7 +1,6 @@
 import mysql from 'mysql2';
-require('dotenv').config()
 
-
+console.log(process.env)
 const pool = mysql.createPool({
     host: 'us-cdbr-east-06.cleardb.net',
     user: 'b1a19a11cc23ca',
