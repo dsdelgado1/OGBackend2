@@ -1,12 +1,16 @@
 import mysql from 'mysql2';
-
+import fs from "fs";
+const serverCa = [fs.readFileSync("./DigiCertGlobalRootCA.crt.pem", "utf8")];
 const pool = mysql.createPool({
-    host: 'us-cdbr-east-06.cleardb.net',
-    user: 'b1a19a11cc23ca',
-    database: 'heroku_bc4830374d63828',
-    password: process.env.DATABASE_PASSWORD
+    host: 'wbw-crm.mysql.database.azure.com',
+    user: 'zach6585',
+    database: 'wbwcrmdata',
+    password: process.env["databasepassword"],
+    port: 3306,
+    ssl: {
+        rejectUnauthorized: true,
+        ca: serverCa
+    }
 });
 
 export default pool.promise();
-
-//Should change the password to an environment variable so it's not visible

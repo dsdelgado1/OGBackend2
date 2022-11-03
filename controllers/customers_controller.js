@@ -7,7 +7,7 @@ export const index = (req, res) =>{
     .then(([rows, fieldData]) => {
         res.json(rows);
     })
-    .catch(err => res.status(500).json({message: "Something went wrong on our end. Try to reload the page and start again"}));
+    .catch(err => res.json(err));
 };
 
 export const create = (req, res) => {
